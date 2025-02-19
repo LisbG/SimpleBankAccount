@@ -21,7 +21,7 @@ public class BankAccount {
         return balance;
     }
 
-    public void withdraw(Double amount) throws WithdrawNotEnoughMoneyExceptions {
+    public void withdraw(Double amount) throws WithdrawExceedWithdrawLimit, WithdrawNotEnoughMoneyExceptions {
 
         if (amount > this.balance) {
             throw new WithdrawNotEnoughMoneyExceptions("The amount exceed the total cash in balance!");
